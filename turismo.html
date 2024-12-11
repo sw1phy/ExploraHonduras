@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turismo - Descubre Honduras</title>
+    <link rel="icon" type="image/x-icon" href="/resources/img/favicon.ico">
+    <style>
+      @font-face {
+        font-family: "Whisper";
+        src: url(fonts/Whisper.otf) format("truetype");
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        src: url(fonts/PlayfairDisplay-VariableFont_wght.ttf) format("truetype");
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        color: white;
+      }
+
+      .section1 {
+        background-color: #ebfffc;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .section2 {
+        background-color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .section3 {
+        background-color: #ebfffc;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .section4 {
+        background-color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .section1 h1 {
+        color: #1c75bc;
+      }
+
+      .section2 h1 {
+        color: #1c75bc;
+      }
+
+      .section3 h1 {
+        color: #1c75bc;
+      }
+
+      .section4 h1 {
+        color: #1c75bc;
+      }
+
+      .description {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      #tourism {
+        font-family: "Whisper", Arial, sans-serif;
+        font-size: 150px;
+        color: white;
+        margin-top: -20px;
+      }
+
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .item {
+        background-color: #ffffff;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .item:hover {
+        transform: scale(1.1);
+      }
+
+      .item img {
+        border-radius:50%;
+        width: 120px;
+        height: auto;
+      }
+
+      .item-label {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .footer {
+        background-color: #22577a;
+        padding: 20px;
+        display: flex;
+        flex-direction: column; /* Cambia la dirección a columna */
+        color: white;
+        margin-top: 20px;
+      }
+      .footer .content {
+        display: flex;
+        justify-content: space-between;
+      }
+      .footer .left-section {
+        flex: 1;
+        margin-left: 5%;
+      }
+      .footer .right-section {
+        flex: 1;
+        text-align: right;
+        margin-right: 5%;
+      }
+      .footer .logo img {
+        width: 150px;
+      }
+      .footer .social-icons {
+        margin-top: 10px;
+      }
+      .footer .social-icons a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+      }
+      .footer .social-icons .facebook {
+        color: #1877f2;
+      }
+      .footer .social-icons .twitter {
+        color: #1da1f2;
+      }
+      .footer .social-icons .linkedin {
+        color: #0077b5;
+      }
+      .footer .social-icons .youtube {
+        color: #ff0000;
+      }
+      .footer .design-info {
+        margin-top: 20px;
+      }
+      .footer .tourism ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer .tourism li {
+        margin: 5px 0;
+      }
+      .footer .tourism li a {
+        text-decoration: none;
+        color: white;
+      }
+      .footer hr {
+        margin: 20px 0;
+        border: 1px solid #fff;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      .footer .rights {
+        margin-left: 5%;
+      }
+      .footer .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #d8b4e2;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 24px;
+      }
+      .bottom-line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        border-top: 2px solid white;
+        margin-top: 20px;
+      }
+
+      .bottom-line .links a {
+        color: black;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 1rem;
+      }
+
+      .bottom-line .links a:hover {
+        text-decoration: underline;
+        color: black;
+      }
+      .top-line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        border-bottom: 2px solid white;
+      }
+
+      .top-line .Explora {
+        height: 50px;
+        width: 130px;
+      }
+
+      .top-line .links a {
+        color: black;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 1rem;
+      }
+
+      .top-line .links a:hover {
+        text-decoration: underline;
+        color: black;
+      }
+
+      .video-section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .video-section video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .video-section .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* Oscurece el video */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+      }
+
+      .video-section .overlay h1 {
+        font-size: 3rem;
+        font-family: "Georgia", serif;
+        margin-bottom: 1rem;
+      }
+
+      .video-section .overlay p {
+        font-size: 1.2rem;
+        font-family: "Arial", sans-serif;
+        max-width: 600px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-line">
+      <img
+        src="resources/img/explorahonduraslogo.png"
+        alt="Explora"
+        class="Explora"
+      />
+      <nav class="links">
+        <a href="index.html">Inicio</a>
+        <a href="turismo.html">Turismo</a>
+      </nav>
+    </div>
+    <header></header>
+
+    <div class="video-section">
+      <!-- Video de fondo -->
+      <video autoplay muted loop>
+        <source src="resources/video/hondurasfilm.mp4" type="video/mp4" />
+        Tu navegador no soporta la reproducción de videos.
+      </video>
+
+      <!-- Texto encima del video -->
+      <div class="overlay">
+        <h1 id="tourism">Turismo</h1>
+        <p>
+          Descubre la belleza y diversidad de Honduras a través de sus
+          fascinantes destinos turísticos. Este espacio organiza los encantos de
+          nuestro país en cuatro categorías principales para que planifiques tu
+          próxima aventura.
+        </p>
+      </div>
+    </div>
+
+    <div class="section1" id="sectionone">
+      <h1>Playas</h1>
+      <p class="description">
+        Explora las paradisíacas costas de Honduras, con playas de arena blanca,
+        aguas cristalinas y paisajes tropicales en lugares como Roatán, Tela y
+        Trujillo. Perfectas para relajarte o disfrutar de actividades acuáticas.
+      </p>
+
+      <div class="grid">
+        <div>
+            <a href="atlantida.html">
+          <p class="item-label">Atlantida</p>
+          <div class="item">
+            <img src="resources/img/turismo/atlantida.jpg" alt="Hoja" />
+          </div>
+        </a>
+        </div>
+        <div>
+            <a href="colon.html">
+          <p class="item-label">Colón</p>
+          <div class="item">
+            <img src="resources/img/turismo/colon.jpg" alt="Hoja" />
+          </div>
+        </a>
+        </div>
+        <div>
+            <a href="islasbahia.html">
+          <p class="item-label">Islas de la Bahía</p>
+          <div class="item">
+            <img src="resources/img/turismo/islasbahia.jpg" alt="Hoja" />
+          </div>
+        </a>
+        </div>
+        <div>
+            <a href="cortes.html">
+          <p class="item-label">Cortés</p>
+          <div class="item">
+            <img src="resources/img/turismo/cortes.jpg" alt="Hoja" />
+          </div>
+        </div>
+    </a>
+      </div>
+    </div>
+
+    <div class="section2" id="sectiontwo">
+      <h1>Montañas</h1>
+      <p class="description">
+        Adéntrate en las majestuosas cordilleras del país, donde encontrarás
+        climas frescos, impresionantes miradores y senderos rodeados de flora y
+        fauna autóctona. Destinos como La Tigra, Celaque y Pico Bonito son
+        ideales para los amantes de la naturaleza y el ecoturismo.
+      </p>
+
+      <div class="grid">
+        <a href="intibuca.html">
+          <div>
+            <p class="item-label">Intibucá</p>
+            <div class="item">
+              <img src="resources/img/turismo/intibuca.jpg" alt="Hoja" />
+            </div>
+          </div>
+        </a>
+        <div>
+            <a href="Lempira.html">
+          <p class="item-label">Lempira</p>
+          <div class="item">
+            <img src="resources/img/turismo/lempira.jpg" alt="Hoja" />
+          </div>
+          </a>
+        </div>
+        <div>
+            <a href="ocotepeque.html">
+          <p class="item-label">Ocotepeque</p>
+          <div class="item">
+            <img src="resources/img/turismo/ocotepeque.jpg" alt="Hoja" />
+          </div>
+        </a>
+        </div>
+        <div>
+            <a href="La Paz.html">
+          <p class="item-label">La Paz</p>
+          <div class="item">
+            <img src="resources/img/turismo/lapaz.jpg" alt="Hoja" />
+          </div>
+        </div>
+    </a>
+      </div>
+    </div>
+
+    <div class="section3" id="sectionthree">
+      <h1>Lugares Históricos</h1>
+      <p class="description">
+        Viaja en el tiempo visitando sitios llenos de historia y cultura, como
+        las imponentes ruinas mayas de Copán, las iglesias coloniales de
+        Comayagua y el casco histórico de Gracias. Cada lugar cuenta historias
+        que reflejan la riqueza del patrimonio hondureño.
+      </p>
+
+      <div class="grid">
+        <div>
+            <a href="comayagua.html">
+          <p class="item-label">Comayagua</p>
+          <div class="item">
+            <img src="resources/img/turismo/comayagua.jpg" alt="Hoja" />
+          </div>
+        </a>
+        </div>
+        <div>
+            <a href="lempira.html">
+          <p class="item-label">Francisco Morazán</p>
+          <div class="item">
+            <img src="resources/img/turismo/franciscomorazan.jpg" alt="Hoja" />
+          </div>
+        </a>
+        </div>
+        <div>
+            <a href="santabarbara.html">
+          <p class="item-label">Santa Bárbara</p>
+          <div class="item">
+            <img src="resources/img/turismo/santabarbara.jpg" alt="Hoja" />
+          </div>
+        </a>
+        </div>
+        <div>
+            <a href="copan.html">
+          <p class="item-label">Copán</p>
+          <div class="item">
+            <img src="resources/img/turismo/copan.jpg" alt="Hoja" />
+          </div>
+        </div>
+    </a>
+      </div>
+    </div>
+
+    <div class="section4"  id="sectionfour">
+      <h1>Áreas protegidas</h1>
+      <p class="description">
+        Conoce las maravillas naturales que Honduras preserva para las
+        generaciones futuras. Desde parques nacionales hasta reservas
+        biológicas, como el Refugio de Vida Silvestre Cuero y Salado o la
+        Reserva de la Biosfera del Río Plátano, estos espacios son un tesoro de
+        biodiversidad y conservación.
+      </p>
+
+      <div class="grid">
+        <div>
+            <a href="olancho.html">
+          <p class="item-label">Olancho</p>
+          <div class="item">
+            <img src="resources/img/turismo/olancho.jpg" alt="Hoja" />
+          </div>
+        </a>
+        </div>
+        <div>
+            <a href="graciasdios.html">
+          <p class="item-label">Gracias a Dios</p>
+          <div class="item">
+            <img src="resources/img/turismo/graciasdios.jpg" alt="Hoja" />
+          </div>
+        </a>
+        </div>
+        <div>
+            <a href="Yoro.html">
+          <p class="item-label">Yoro</p>
+          <div class="item">
+            <img src="resources/img/turismo/yoro.jpg" alt="Hoja" />
+          </div>
+        </a>
+        </div>
+        <div>
+            <a href="elparaiso.html">
+          <p class="item-label">El Paraíso</p>
+          <div class="item">
+            <img src="resources/img/turismo/elparaiso.jpg" alt="Hoja" />
+          </div>
+        </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="content">
+        <div class="left-section">
+          <div class="logo">
+            <img
+              src="resources/img/explorahonduraslogo.png"
+              alt="Explora Honduras Logo"
+            />
+          </div>
+          <div class="social-icons">
+            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="design-info">
+            <p>
+              Diseño y aporte de <b>Midgard Amador</b><br />Grupo #3<br />Diseño web y administración
+              de contenidos
+            </p>
+            <p>Impulsando el desarrollo turístico y cultural</p>
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="tourism">
+            <h3>Turismo</h3>
+            <ul>
+              <li><a href="#sectionone">Playas</a></li>
+              <li><a href="#sectiontwo">Montañas</a></li>
+              <li><a href="#sectionthree">Lugares históricos</a></li>
+              <li><a href="#sectionfour">Áreas protegidas</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="rights">
+        <p>&copy; 2024 ExploraHonduras. Todos los derechos reservados.</p>
+      </div>
+      <a href="#" class="back-to-top">&#8679;</a>
+    </footer>
+  </body>
+</html>
