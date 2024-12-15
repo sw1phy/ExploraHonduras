@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laguna Chiligatoro - Descubre Honduras</title>
+    <link rel="icon" type="image/x-icon" href="/resources/img/favicon.ico">
+    <style>
+        @font-face {
+            font-family: 'Whisper';
+            src: url(fonts/Whisper.otf) format('truetype');
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url(fonts/PlayfairDisplay-VariableFont_wght.ttf) format('truetype');
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-image: url(resources/img/departamentos/lapaz/Chiligatoro.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: white;
+            padding: 70px 20px;
+            height: 200px;
+        }
+        .section {
+            text-align: center;
+            margin-top: 0px;
+        }
+        .highlight-box {
+            background-color: #EBFFFC;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 0px auto;
+        }
+        .section h2 {
+            color: #4AA2FF;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', Arial, sans-serif;
+        }
+        .section h1 {
+            font-family: 'Whisper', Arial, sans-serif;
+            font-size: 100px;
+            color: #4AA2FF;
+            margin-top: -20px;
+        }
+        .section p {
+            margin: 0 auto;
+            max-width: 800px;
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .atractivos, .gastronomia {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .card {
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+        }
+        .card h3 {
+            margin: 15px;
+            color: #0074d9;
+        }
+        .card p {
+            margin: 15px;
+            font-size: 0.9rem;
+            color: #333;
+            text-align: center;
+        }
+        .footer {
+            background-color: #22577a;
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Cambia la dirección a columna */
+            color: white;
+            margin-top: 20px;
+        }
+        .footer .content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer .left-section {
+            flex: 1;
+            margin-left: 5%;
+        }
+        .footer .right-section {
+            flex: 1;
+            text-align: right;
+            margin-right: 5%;
+        }
+        .footer .logo img {
+            width: 150px;
+        }
+        .footer .social-icons {
+            margin-top: 10px;
+        }
+        .footer .social-icons a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+        .footer .social-icons .facebook {
+            color: #1877f2;
+        }
+        .footer .social-icons .twitter {
+            color: #1da1f2;
+        }
+        .footer .social-icons .linkedin {
+            color: #0077b5;
+        }
+        .footer .social-icons .youtube {
+            color: #ff0000;
+        }
+        .footer .design-info {
+            margin-top: 20px;
+        }
+        .footer .tourism ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer .tourism li {
+            margin: 5px 0;
+        }
+        .footer .tourism li a {
+            text-decoration: none;
+            color: white;
+        }
+        .footer hr {
+            margin: 20px 0;
+            border: 1px solid #fff;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .footer .rights {
+            margin-left: 5%;
+        }
+        .footer .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #d8b4e2;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .bottom-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border-top: 2px solid white;
+            margin-top: 20px;
+        }
+
+        .bottom-line .links a {
+            color: black;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1rem;
+        }
+
+        .bottom-line .links a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+        .top-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border-bottom: 2px solid white;
+        }
+
+        .top-line .Explora {
+            height: 50px;
+            width: 130px;
+        }
+
+        .top-line .links a {
+            color: black;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1rem;
+        }
+
+        .top-line .links a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-line">
+        <img src="resources/img/explorahonduraslogo.png" alt="Explora" class="Explora">
+        <nav class="links">
+            <a href="index.html">Inicio</a>
+            <a href="turismo.html">Turismo</a>
+            <a href="Creadores.html">Creadores</a>
+        </nav>
+    </div>   
+    <header>
+    </header>
+
+    <section class="section">
+        <div class="highlight-box">
+            <h1>Laguna Chiligatoro</h1>
+            <p>
+                La Laguna Chiligatoro es un impresionante cuerpo de agua ubicado en las montañas de la región de los Yungas, cerca de la ciudad de La Paz, Bolivia. Este lugar es conocido por su belleza natural, con aguas cristalinas rodeadas de vegetación exuberante. La laguna es un destino popular para los amantes de la naturaleza, el senderismo y aquellos que buscan un lugar tranquilo para relajarse y disfrutar de un paisaje sereno.
+            </p>
+            <br>
+            <p>
+                La Laguna Chiligatoro es un sitio perfecto para realizar actividades como la observación de aves, la pesca deportiva y el senderismo. Su entorno pacífico y su biodiversidad la convierten en un lugar ideal para quienes buscan escapar del bullicio de la ciudad y conectarse con la naturaleza en su estado más puro.
+            </p>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2>Laguna Chiligatoro</h2>
+        <div class="atractivos">
+            <div class="card">
+                <h3>Ubicación</h3>
+                <img src="resources/img/departamentos/lapaz/Lugares Turisticos/chiligatoro1.webp" alt="Ubicación de la Laguna Chiligatoro">
+                <p>
+                    La Laguna Chiligatoro se encuentra en la región de los Yungas, a unos 30 kilómetros de la ciudad de La Paz. El acceso es fácil a través de una carretera que lleva directamente a la zona, lo que la convierte en un destino accesible tanto para los locales como para los turistas que buscan explorar la belleza natural de los Yungas.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Características del lugar</h3>
+                <img src="resources/img/departamentos/lapaz/Lugares Turisticos/chiligatoro2.jpg" alt="Características de la Laguna Chiligatoro">
+                <p>
+                    La laguna se encuentra rodeada por montañas verdes y bosques de neblina, lo que crea un paisaje espectacular. Sus aguas son de un azul intenso y están llenas de vida, siendo un hábitat para diversas especies de flora y fauna locales. La tranquilidad del agua y el entorno natural hacen de este lugar un sitio perfecto para desconectar y disfrutar de la paz y serenidad.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Curiosidades</h3>
+                <img src="resources/img/departamentos/lapaz/Lugares Turisticos/chiligatoro3.webp" alt="Curiosidades de la Laguna Chiligatoro">
+                <ul>
+                    <li>La laguna es conocida por su biodiversidad, siendo hogar de diversas especies de peces, aves y plantas acuáticas.</li>
+                    <li>El entorno natural alrededor de la laguna es perfecto para realizar caminatas y explorar los bosques circundantes.</li>
+                    <li>Es un lugar popular entre los fotógrafos y los amantes de la naturaleza por sus paisajes pintorescos y su tranquilidad.</li>
+                    <li>El área circundante es parte de un ecosistema protegido, lo que ayuda a conservar su belleza natural y su biodiversidad.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Actividades</h3>
+                <img src="resources/img/departamentos/lapaz/Lugares Turisticos/chiligatoro4.jpg" alt="Actividades en la Laguna Chiligatoro">
+                <p>
+                    Las actividades más populares en la Laguna Chiligatoro incluyen el senderismo por los senderos cercanos, la observación de aves y la pesca deportiva. Además, los visitantes pueden disfrutar de la tranquilidad del lugar, haciendo picnics a orillas de la laguna o simplemente relajándose mientras disfrutan de las vistas.
+                </p>
+            </div>
+        </div>
+    </section>    
+
+    <footer class="footer">
+        <div class="content">
+            <div class="left-section">
+                <div class="logo">
+                    <img src="resources/img/explorahonduraslogo.png" alt="Explora Honduras Logo">
+                </div>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.facebook.com/UJCVOFICIAL/?locale=es_LA" class="facebook"><i class="fab fa-facebook"></i></a>
+                    <a target="_blank" href="https://x.com/admision_ujcv?lang=es" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/school/universidad-jose-cecilio-del-valle/posts/?feedView=all" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/@ujcvoficial" class="youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="design-info">
+                    <p>Diseño y aporte de <b>Eduardo Ordoñez</b><br>Grupo #3<br>Diseño web y administración de contenidos</p>
+                    <p>Impulsando el desarrollo turístico y cultural</p>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="tourism">
+                    <h3>Turismo</h3>
+                    <ul>
+                        <li><a href="turismo.html#sectionone">Playas</a></li>
+                        <li><a href="turismo.html#sectiontwo">Montañas</a></li>
+                        <li><a href="turismo.html#sectionthree">Lugares históricos</a></li>
+                        <li><a href="turismo.html#sectionfour">Áreas protegidas</a></li>
+                        <li><a href="Creadores.html">Creadores</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="rights">
+            <p>&copy; 2024 ExploraHonduras. Todos los derechos reservados.</p>
+        </div>
+        <a href="#" class="back-to-top">&#8679;</a>
+    </footer>    
+</body>
+</html>
